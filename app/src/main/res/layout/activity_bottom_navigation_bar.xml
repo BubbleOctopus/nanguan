@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@color/default_backgroup_color_black"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/llChat"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/ivMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000" />
+
+        <TextView
+            android:id="@+id/tvMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottom_btn_menu_main"
+            android:textColor="@drawable/tab_textview" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llFriends"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/ivRanking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"/>
+
+        <TextView
+            android:id="@+id/tvRanking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottom_btn_menu_ranking"
+            android:textColor="@drawable/tab_textview" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llContacts"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/ivDiscover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"/>
+
+        <TextView
+            android:id="@+id/tvDiscover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottom_btn_menu_discover"
+            android:textColor="@drawable/tab_textview" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSettings"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/ivMy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"/>
+
+        <TextView
+            android:id="@+id/tvMy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottom_btn_menu_my"
+            android:textColor="@drawable/tab_textview" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,26 +1,34 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.3"
+    compileSdkVersion 23
+    buildToolsVersion "24.0.2"
 
     defaultConfig {
         applicationId "com.nanguan"
         minSdkVersion 14
-        targetSdkVersion 24
+        targetSdkVersion 15
         versionCode 1
         versionName "1.0"
     }
     buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        debug {
+            //接口URL
+            buildConfigField "String", "BASE_URL", project.BASE_URL_BETA
         }
     }
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:25.0.1'
-    compile 'com.android.support:recyclerview-v7:25.0.1'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:recyclerview-v7:24.2.0'
+    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.1.2'
+    compile 'com.github.bumptech.glide:glide:3.6.1'//图片加载
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'// 控制状态栏
+    compile 'in.srain.cube:ultra-ptr:1.0.11'// 下拉刷新
+    compile 'com.squareup.okhttp3:logging-interceptor:3.1.2'
 }

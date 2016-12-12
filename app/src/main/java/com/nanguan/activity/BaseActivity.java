@@ -30,8 +30,8 @@ public abstract class BaseActivity<V, T extends BasePresenter<V>> extends AppCom
     };
 
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(mAction);

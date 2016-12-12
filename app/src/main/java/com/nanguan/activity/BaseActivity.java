@@ -34,10 +34,10 @@ public abstract class BaseActivity<V, T extends BasePresenter<V>> extends AppCom
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        ActionBar actionBar = getSupportActionBar();
+        /*ActionBar actionBar = getSupportActionBar();
         if(null != actionBar){
             actionBar.hide();
-        }
+        }*/
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(mAction);
         this.registerReceiver(mDestroyActivityBroadcastReceiver, intentFilter);

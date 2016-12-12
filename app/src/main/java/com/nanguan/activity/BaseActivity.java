@@ -5,8 +5,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.os.PersistableBundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Window;
 
 import com.nanguan.presenter.BasePresenter;
 
@@ -32,7 +33,11 @@ public abstract class BaseActivity<V, T extends BasePresenter<V>> extends AppCom
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        ActionBar actionBar = getSupportActionBar();
+        if(null != actionBar){
+            actionBar.hide();
+        }
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(mAction);
         this.registerReceiver(mDestroyActivityBroadcastReceiver, intentFilter);

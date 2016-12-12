@@ -5,3 +5,7 @@
 .DS_Store
 /build
 /captures
+.idea/.name
+nanguan.iml
+/.idea/
+/app/build/

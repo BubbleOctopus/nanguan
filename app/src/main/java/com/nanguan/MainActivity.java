@@ -9,7 +9,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.nanguan.activity.BaseActivity;
 import com.nanguan.fragment.ContentFragment;
 import com.nanguan.presenter.BasePresenter;

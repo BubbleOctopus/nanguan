@@ -1,7 +1,7 @@
 package com.nanguan.bean;
 
 /**
- * Created by jinxh on 16/2/17.
+ * Created by lj
  */
 public class HttpBean<T> {
     private boolean success;

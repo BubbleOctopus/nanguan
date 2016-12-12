@@ -11,10 +11,26 @@
         android:background="?attr/colorPrimary">
     </android.support.v7.widget.Toolbar>
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/bottom_navigation_panel"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:background="@color/default_color_black"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <include layout="@layout/activity_bottom_navigation_bar" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/content_panel"
         android:layout_below="@+id/activity_main_toolbar"
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_above="@+id/bottom_navigation_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </RelativeLayout>

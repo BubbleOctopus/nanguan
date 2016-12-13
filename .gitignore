@@ -9,3 +9,5 @@
 nanguan.iml
 /.idea/
 /app/build/
+/.gitignore
+/app/app.iml

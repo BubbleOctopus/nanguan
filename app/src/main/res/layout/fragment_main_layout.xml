@@ -1,12 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerview_main"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/default_backgroup_color_black"/>
-</RelativeLayout>
+        android:layout_height="wrap_content"
+        android:background="@color/default_color_black"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/main_tableLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="@android:color/transparent"
+            app:tabMode="scrollable"></android.support.design.widget.TabLayout>
+
+        <ImageView
+            android:id="@+id/main_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:clickable="true"
+            android:visibility="gone"
+            android:src="@drawable/ic_plus" />
+    </LinearLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></android.support.v4.view.ViewPager>
+</LinearLayout>

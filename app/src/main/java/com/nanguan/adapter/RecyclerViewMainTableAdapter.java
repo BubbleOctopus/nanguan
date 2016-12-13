@@ -18,9 +18,9 @@ import java.util.List;
  * 作者：liemng on 2016/12/13
  * 邮箱：859686819@qq.com
  */
-public class RecyclerViewMainAdapter extends RecyclerView.Adapter<RecyclerViewMainAdapter.MainViewHolder> {
+public class RecyclerViewMainTableAdapter extends RecyclerView.Adapter<RecyclerViewMainTableAdapter.MainViewHolder> {
 
-    public static final String TAG = RecyclerViewMainAdapter.class.getSimpleName();
+    public static final String TAG = RecyclerViewMainTableAdapter.class.getSimpleName();
     private static final int ANIMATED_ITEMS_COUNT = 4;
     private int lastAnimatedPosition = -1;
 
@@ -39,13 +39,13 @@ public class RecyclerViewMainAdapter extends RecyclerView.Adapter<RecyclerViewMa
     }
     public Context mCtx;
 
-    public RecyclerViewMainAdapter(Context context){
+    public RecyclerViewMainTableAdapter(Context context){
         this.mCtx = context;
     }
 
     @Override
     public MainViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        MainViewHolder mainViewHolder = new MainViewHolder(LayoutInflater.from(mCtx).inflate(R.layout.fragment_main_layout_item_section, null, false));
+        MainViewHolder mainViewHolder = new MainViewHolder(LayoutInflater.from(mCtx).inflate(R.layout.fragment_main_table_layout_item_section, null, false));
         return mainViewHolder;
     }
 

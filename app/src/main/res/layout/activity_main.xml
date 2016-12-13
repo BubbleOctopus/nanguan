@@ -1,36 +1,45 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/theme_color_blue"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity">
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/activity_main_toolbar"
-        android:layout_height="wrap_content"
+    <!--布局-->
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:minHeight="?attr/actionBarSize"
-        android:background="?attr/colorPrimary">
-    </android.support.v7.widget.Toolbar>
+        android:layout_height="match_parent"
+        android:background="@color/default_color_white">
 
-    <LinearLayout
-        android:id="@+id/bottom_navigation_panel"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
 
-        <TextView
-            android:background="@color/default_color_black"
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/activity_main_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="1dp" />
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"></android.support.v7.widget.Toolbar>
 
-        <include layout="@layout/activity_bottom_navigation_bar" />
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/bottom_navigation_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
 
-    <FrameLayout
-        android:id="@+id/content_panel"
-        android:layout_below="@+id/activity_main_toolbar"
-        android:layout_above="@+id/bottom_navigation_panel"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/default_color_white" />
 
+            <include layout="@layout/activity_bottom_navigation_bar" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/content_panel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_navigation_panel"
+            android:layout_below="@+id/activity_main_toolbar" />
+    </RelativeLayout>
+    <!--布局-->
 </RelativeLayout>

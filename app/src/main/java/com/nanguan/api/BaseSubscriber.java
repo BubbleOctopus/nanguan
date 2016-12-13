@@ -36,7 +36,7 @@ public class BaseSubscriber<T> extends Subscriber<HttpBean<T>> {
             int code = httpException.code();
             String msg = httpException.getMessage();
             if (code == 504) {
-                msg = "ÍøÂç²»¸øÁ¦";
+                msg = "ç½‘ç»œä¸é€šç•…";
             }
             apiCallback.onFailure(code, msg);
         } else {

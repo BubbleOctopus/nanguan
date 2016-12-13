@@ -2,6 +2,7 @@
 <resources>
 
     <color name="theme_color_blue">#0E6DB0</color>>
+    <color name="theme_color_black">#000000</color>>
     <color name="default_color_black">#CCCCCC</color>
     <color name="default_backgroup_color_black">#FFFFFF</color>
     <color name="default_deliver_line_color_black">#8B8BB3</color>

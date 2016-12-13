@@ -87,5 +87,7 @@ public class ContentFragment extends BaseFragment {
     };
 
     public void transitionPage(int position) {
+        if(null != mContentViewPager)
+            mContentViewPager.setCurrentItem(position);
     }
 }

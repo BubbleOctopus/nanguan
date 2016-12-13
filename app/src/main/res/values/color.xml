@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="theme_color_blue">#0E6DB0</color>>
+    <color name="theme_color_blue">#4876FF</color>>
     <color name="theme_color_black">#000000</color>>
     <color name="default_color_white">#CCCCCC</color>
     <color name="default_backgroup_color_black">#FFFFFF</color>

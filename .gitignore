@@ -1,11 +1,12 @@
 .gradle
 /local.properties
-/.idea/workspace.xml
-/.idea/libraries
 .DS_Store
 /build
 /captures
-.idea/.name
 nanguan.iml
-/.idea/
+/.idea
 /app/build/
+/MyApplication.iml
+/gradlew
+/gradle.properties
+/gradlew.bat

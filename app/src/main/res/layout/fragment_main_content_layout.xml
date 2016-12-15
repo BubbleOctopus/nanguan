@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.nanguan.view.ImageCycleView
+                android:id="@+id/icv_topView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+            </com.nanguan.view.ImageCycleView>
+
+            <com.nanguan.view.NoScrollListView
+                android:id="@+id/list_main"
+                android:dividerHeight="0.1dp"
+                android:divider="@color/color999999"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.nanguan.view.NoScrollListView>
+        </LinearLayout>
+    </ScrollView>
+

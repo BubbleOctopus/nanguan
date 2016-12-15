@@ -3,36 +3,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/default_color_white"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/default_color_white"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:background="@color/theme_color_black"
+        android:orientation="vertical">
 
-        <android.support.design.widget.TabLayout
-            android:id="@+id/main_tableLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:tabIndicatorColor="@android:color/transparent"
-            app:tabMode="scrollable"></android.support.design.widget.TabLayout>
+        <com.nanguan.view.MySwipeToLoadLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/swipeToLoadLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:swipe_style="classic">
 
-        <ImageView
-            android:id="@+id/main_more"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:clickable="true"
-            android:visibility="gone"
-            android:src="@drawable/ic_plus" />
+            <include
+                android:id="@id/swipe_refresh_header"
+                layout="@layout/layout_twitter_header" />
+
+            <include
+                android:id="@+id/swipe_target"
+                layout="@layout/fragment_main_content_layout" />
+
+            <include
+                android:id="@id/swipe_load_more_footer"
+                layout="@layout/layout_classic_footer" />
+        </com.nanguan.view.MySwipeToLoadLayout>
     </LinearLayout>
-
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/main_viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"></android.support.v4.view.ViewPager>
 </LinearLayout>

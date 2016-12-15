@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:state_selected="true" android:color="@color/theme_color_blue"/>
-    <item android:color="@color/default_color_white"/>
+    <item android:state_selected="true" android:color="@color/color_red"/>
+    <item android:color="@color/color999999"/>
 </selector>

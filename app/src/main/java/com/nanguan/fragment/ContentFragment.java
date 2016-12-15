@@ -9,10 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.nanguan.MainActivity;
 import com.nanguan.R;
+import com.nanguan.activity.MainActivity;
 import com.nanguan.adapter.ContentPagerAdapter;
-import com.nanguan.fragment.fragment.MenuFragmentManager;
+import com.nanguan.view.NoScrollViewPager;
 
 import java.util.List;
 
@@ -28,7 +28,7 @@ public class ContentFragment extends BaseFragment {
     public static final int DEFAULT_SELECTED_ITEM = 0;
 
     private View mRootView;
-    private ViewPager mContentViewPager;
+    private NoScrollViewPager mContentViewPager;
     private Context mCtx;
 
     private MenuFragmentManager mMenuFragmentManager;
@@ -55,7 +55,8 @@ public class ContentFragment extends BaseFragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mContentViewPager = (ViewPager) mRootView.findViewById(R.id.content_viewpager);
+        mContentViewPager = (NoScrollViewPager) mRootView.findViewById(R.id.content_viewpager);
+        mContentViewPager.setPagingEnabled(false);
 
         mMenuFragmentManager = new MenuFragmentManager(mCtx);
         List<Fragment> fragmentList = mMenuFragmentManager.getFragmentList();

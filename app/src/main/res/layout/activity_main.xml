@@ -26,10 +26,6 @@
             android:layout_alignParentBottom="true"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/default_color_white" />
 
             <include layout="@layout/activity_bottom_navigation_bar" />
         </LinearLayout>

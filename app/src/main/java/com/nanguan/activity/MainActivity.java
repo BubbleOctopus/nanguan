@@ -171,6 +171,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         if(null != mContentFragment)
             mContentFragment.transitionPage(position);
     }
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+
+    }
 
     public enum MenuType{
         BTN_MAIN,BTN_RANKING,BTN_DISCOVER,BTN_MY;
